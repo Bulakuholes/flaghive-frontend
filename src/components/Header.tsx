@@ -1,33 +1,30 @@
 import Link from "next/link";
+import DarkModeButton from "./DarkMode";
 
 export default function Header() {
     return (
-        <header className="flex flex-row justify-between items-center p-4 h-64 bg-background-light">
-            <h1>FlagHive</h1>
-            <nav>
-                <ul>
+        <header className="flex flex-row justify-between items-center p-4 h-16 bg-gray-200 dark:bg-gray-800 dark:text-white shadow-md">
+            <h1 className="text-2xl font-bold">FlagHive</h1>
+            <nav className="flex space-x-4">
+                <ul className="flex space-x-4">
                     <li>
-                        <Link href="/app">
-                            App
-                        </Link>
+                        <Link href="/app" className="hover:text-gray-500">App</Link>
                     </li>
                     <li>
-                        <Link href="/events">
-                            Events
-                        </Link>
+                        <Link href="/events" className="hover:text-gray-500">Events</Link>
                     </li>
                     <li>
-                        <Link href="/teams">
-                            Teams
-                        </Link>
+                        <Link href="/teams" className="hover:text-gray-500">Teams</Link>
                     </li>
                 </ul>
             </nav>
-
-            <nav>
-                <img src="https://avatar.iran.liara.run/public/25" alt="Profile Picture" />
-                <p>Username</p>
-            </nav>
+            <div className="flex items-center space-x-4">
+                <div className="flex items-center space-x-2">
+                    <img src="https://avatar.iran.liara.run/public/25" alt="Profile Picture" className="w-12 rounded-full"/>
+                    <p className="font-medium">Username</p>
+                </div>
+                <DarkModeButton />
+            </div>
         </header>
     )
 }
