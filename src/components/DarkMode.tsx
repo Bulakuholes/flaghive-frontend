@@ -38,7 +38,7 @@ export default function DarkModeButton() {
         // display: darkMode ? "none" : "block",
         display: "block",
         position: "absolute",
-        transform: darkMode ? "translateY(150%)" : "translateY(0)",
+        transform: darkMode ? "translateY(0%)" : "translateY(150%)",
         transition: "all 0.3s",
       }} />
       <Moon style={{
@@ -46,7 +46,7 @@ export default function DarkModeButton() {
         display: "block",
         position: "absolute",
         transition: "all 0.3s",
-        transform: darkMode ? "translateY(0)" : "translateY(-150%)",
+        transform: darkMode ? "translateY(-150%)" : "translateY(0%)",
       }} />
     </button>
   );

@@ -1,6 +1,10 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 
+* {
+  outline: none !important;
+}
+
 body {
   @apply bg-white text-gray-900 dark:bg-gray-900 dark:text-white;
   transition: background-color 0.2s, color 0.2s;
