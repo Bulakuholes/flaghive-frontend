@@ -37,6 +37,17 @@ export default function Header() {
             <p className="font-medium">Username</p>
           </div>
         )}
+
+        {!authed && (
+          <div className="flex items-center space-x-4">
+            <Link href="/register" className="hover:text-gray-500">
+              Register
+            </Link>
+            <Link href="/login" className="hover:text-gray-500">
+              Login
+            </Link>
+          </div>
+        )}
         <DarkModeButton />
       </div>
     </header>
